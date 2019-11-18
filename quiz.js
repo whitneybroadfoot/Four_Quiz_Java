@@ -1,8 +1,6 @@
 document.getElementById("clickButton").addEventListener("click", function(){
-    document.getElementById("myQuestions").innerHTML = "Questions will start";
+    document.getElementById("myQuestions").innerHTML = questions;
     });
-
-
 
 
     var questions = [
@@ -33,4 +31,20 @@ document.getElementById("clickButton").addEventListener("click", function(){
         },
         
       ];
-      
+
+
+
+
+
+// var choices = [];
+// var currentQuestion = 0
+//     for (currentQuestion = 0; answer < choices.length; currentQuestion++) {
+//         text += choices[i] + "";
+//       }
+// document.getElementById("myQuestions").innerHTML = text;
+
+
+//Other attempts:
+//If you put a variable to .value it makes the input what you get from the user into a value you can use
+//Abby's suggestion of currentQuestion++ instead of for loop
+//Unordered list within form <ul id = "question-list">; li id = "0"
