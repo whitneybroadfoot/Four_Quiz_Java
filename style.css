@@ -1,5 +1,6 @@
 body {
-    background-color: yellow;
+    color: black; 
+    background-color:lightgray;
 }
 
 .container {
@@ -7,4 +8,8 @@ body {
     width: 75%;
     height: 200px;
     background-color: lightblue; 
+}
+
+button {
+    background-color: purple;
 }
