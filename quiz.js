@@ -1,6 +1,18 @@
-document.getElementById("clickButton").addEventListener("click", function(){
-    document.getElementById("myQuestions").innerHTML = questions;
-    });
+//document.getElementById("clickButton").addEventListener("click", quizFunction());
+   
+
+function quizFunction(){
+  var doc = document.getElementById("myQuestions");
+  //for
+  doc.innerHTML = questions[0].title;  
+  for (var i = 0 ; i < 4; i++){
+    var bnt = document.createElement("BUTTON");
+    bnt.innerHTML = questions[0].choices[i];
+    doc.appendChild(document.createElement("br"));
+    doc.appendChild(bnt);
+  }
+ 
+}
 
 
     var questions = [
