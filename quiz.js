@@ -1,21 +1,9 @@
 //document.getElementById("clickButton").addEventListener("click", quizFunction());
    
 
-function quizFunction(){
-  var doc = document.getElementById("myQuestions");
-  //for
-  doc.innerHTML = questions[0].title;  
-  for (var i = 0 ; i < 4; i++){
-    var bnt = document.createElement("BUTTON");
-    bnt.innerHTML = questions[0].choices[i];
-    doc.appendChild(document.createElement("br"));
-    doc.appendChild(bnt);
-  }
- 
-}
+var score = 0;
 
-
-    var questions = [
+var questions = [
         {
           title: "Commonly used data types DO NOT include:",
           choices: ["strings", "booleans", "alerts", "numbers"],
@@ -44,6 +32,19 @@ function quizFunction(){
         
       ];
 
+
+      function quizFunction(){
+        var doc = document.getElementById("myQuestions");
+        //for
+        doc.innerHTML = questions[0].title;  
+        for (var i = 0; i < 4; i++){
+          var btn = document.createElement("BUTTON");
+          btn.innerHTML = questions[0].choices[i];
+          doc.appendChild(document.createElement("br"));
+          doc.appendChild(btn);
+        }
+       
+      }
 
 
 
