@@ -3,7 +3,7 @@ body {
     background-color:lightgray;
 }
 
-.container {
+.quiz_wrapper {
     align-content: center;
     width: 75%;
     height: 200px;

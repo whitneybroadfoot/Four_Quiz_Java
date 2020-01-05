@@ -1,18 +1,36 @@
 <!DOCTYPE html>
-<html lang = "en">
-    <head>
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <link rel="stylesheet" type="text/css" href="style.css">
-    </head>
-    <body>
-        <div class = "container">
-        <h1>Coding Quiz Challenge</h1>
-            <button onclick= "quizFunction()">Click to Start Quiz</button>
-            <p id="myQuestions">
-                   
-                </p>
-        <form id = "quiz-wrap"></form>
-        </div> <!--ending div for container-->
-<script type="text/javascript" src="quiz.js"></script>
-    <body>
+<html lang="en">
+
+<head>
+    <title>Multiple Choice Quiz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>JavaScript Quiz</h1>
+    <div class="quiz_wrapper">
+        <div class="question" id="questionBox">
+        </div>
+
+        <div class="options">
+            <ul id="ul">
+                <li id="opOne" onclick="button(this)"></li>
+                <li id="opTwo" onclick="button(this)"></li>
+                <li id="opThree" onclick="button(this)"></li>
+                <li id="opFour" onclick="button(this)"></li>
+            </ul>
+        </div>
+        <div class="score">
+            <div class="next">
+                <button type="button" onclick="next()" id="button">Next</button>
+            </div>
+            <div class="score-card">
+                Score : <span id="scoreCard">0</span>
+            </div>
+        </div>
+
+    </div>
+    <script src="quiz.js"></script>
+</body>
+
 </html>
