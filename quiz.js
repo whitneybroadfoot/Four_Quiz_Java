@@ -7,7 +7,7 @@ var two = document.getElementById('two');
 var three = document.getElementById('three');
 var four = document.getElementById('four');
 
-//questions for grabbing and looping
+//questions 
 var app = {
   questions: [
 
@@ -62,7 +62,7 @@ var app = {
       five.style.display = "none";
     }
   },
-  
+
   next: function () {
     this.index++;
     this.load();
@@ -88,9 +88,10 @@ var app = {
 
     }
   },
-  
+
 
 }
+//end of the app curly bracket
 
 window.onload = app.load();
 
