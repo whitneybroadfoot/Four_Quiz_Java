@@ -1,4 +1,4 @@
-//main variables live at top of js
+//main variables 
 var ul = document.getElementById('ul');
 var btn = document.getElementById('button');
 var scoreCard = document.getElementById('scoreCard');
@@ -44,7 +44,7 @@ var app = {
 
   ],
 
-//options for choosing
+  //options for choosing
   index: 0,
   load: function () {
     if (this.index <= this.questions.length - 1) {
@@ -70,18 +70,43 @@ var app = {
     this.index++;
     this.load();
   },
-  check: function (ele) {
+  check: function (element) {
 
-    var id = ele.id.split('');
+    var id = element.id.split('');
 
     if (id[id.length - 1] == this.questions[this.index].answer) {
       this.score++;
-      ele.className = "correct";
-      ele.innerHTML = "Correct";
+      element.className = "correct";
+      element.innerHTML = "Correct";
       this.scoreCard();
     }
     else {
-      ele.className = "wrong";
-      ele.innerHTML = "Wrong";
+      element.className = "wrong";
+      element.innerHTML = "Wrong";
     }
   },
+
+  clickAble: function () {
+    for (let i = 0; i < ul.children.length; i++) {
+      ul.children[i].style.pointerEvents = "auto";
+      ul.children[i].className = ""
+
+    }
+  },
+  score: 0,
+  scoreCard: function () {
+    scoreCard.innerHTML = this.questions.length + "/" + this.score;
+  }
+
+}
+
+window.onload = app.load();
+
+function button(element) {
+  app.check(element);
+}
+
+function next() {
+  app.next();
+  app.clickAble();
+} 
