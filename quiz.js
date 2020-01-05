@@ -14,31 +14,31 @@ var app = {
     {
       title: "Commonly used data types DO NOT include",
       choices: ["strings", "booleans", "alerts", "numbers"],
-      answer: "alerts"
+      answer: 2
     },
 
     {
       title: "The condition in an if / else statement is enclosed within ____.",
       choices: ["quotes", "curly brackets", "parentheses", "square brackets"],
-      answer: "parentheses"
+      answer: 2
     },
 
     {
       title: "What year was Javascript initially created?",
       choices: ["2000", "1825", "1995", "1992"],
-      answer: "1992"
+      answer: 3
     },
 
     {
       title: "Which symbol is used to create single line comments in Javascript?",
       choices: ["//", "question marks", "parentheses", "$$"],
-      answer: "//"
+      answer: 0
     },
 
     {
       title: "What text do you need to start building a for-loop?",
       choices: ["begin", "for", "start text", "none, just use square brackets"],
-      answer: "for"
+      answer: 1
     }
 
   ],
@@ -69,9 +69,9 @@ var app = {
   },
   check: function (element) {
 
-    var id = element.id.split('');
+    var id = element.id.split("");
 
-    if (id[id.length - 1] == this.questions[this.index].answer) {
+    if (id[id.length - 1] === this.questions[this.index].answer) {
       element.className = "correct";
       element.innerHTML = "Correct";
     }
@@ -88,7 +88,6 @@ var app = {
 
     }
   },
-
 
 }
 //end of the app curly bracket
