@@ -2,10 +2,10 @@
 var ul = document.getElementById('ul');
 var btn = document.getElementById('button');
 var quizBox = document.getElementById('questionBox');
-var one = document.getElementById('one');
-var two = document.getElementById('two');
-var three = document.getElementById('three');
-var four = document.getElementById('four');
+var one = document.getElementById('1');
+var two = document.getElementById('2');
+var three = document.getElementById('3');
+var four = document.getElementById('4');
 
 //questions 
 var app = {
@@ -43,6 +43,10 @@ var app = {
 
   ],
 
+
+
+
+
   //options for choosing
   index: 0,
   load: function () {
@@ -68,10 +72,13 @@ var app = {
     this.load();
   },
   check: function (element) {
+    console.log("check function", element); 
 
-    var id = element.id.split("");
+    var id = element.id
+    console.log("checking id", id);
 
-    if (id[id.length - 1] === this.questions[this.index].answer) {
+    console.log("comparing", this.questions[this.index].answer);
+    if (id -1 === this.questions[this.index].answer) {
       element.className = "correct";
       element.innerHTML = "Correct";
     }
@@ -95,6 +102,7 @@ var app = {
 window.onload = app.load();
 
 function button(element) {
+  console.log(element);
   app.check(element);
 }
 
