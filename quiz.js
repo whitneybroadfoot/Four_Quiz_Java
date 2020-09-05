@@ -12,14 +12,14 @@ var app = {
   questions: [
 
     {
-      title: "Commonly used data types DO NOT include",
-      choices: ["strings", "booleans", "alerts", "numbers"],
+      title: "How long did it take to write the very first song from the musical?",
+      choices: ["One week", "One month", "One year", "One day"],
       answer: 2
     },
 
     {
-      title: "The condition in an if / else statement is enclosed within ____.",
-      choices: ["quotes", "curly brackets", "parentheses", "square brackets"],
+      title: "The musical originally debuted on Broadway ____.",
+      choices: ["the early 1990's", "in 2020 after Disney+", "Summer of 2015", "in 2005"],
       answer: 2
     },
 
